@@ -1,0 +1,49 @@
+<?php 
+session_start();
+if(isset($_SESSION["USER"]) && !empty($_SESSION["USER"])){
+	
+}
+else{
+	header("location:index.php");
+}
+?>
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="cs/bootstrap.min.v3.css">
+    <link rel="stylesheet" href="cs/style.css">
+	<link rel="stylesheet" href="cs/w3.css">
+    <link rel="icon" href="#" type="image/x-icon">
+        <title> BOOK | HOSTEL | ZAPS </title>
+</head>
+
+<body>
+
+
+	<div class="container">
+    	<div class="row header">
+        	<?php include 'header.php' ?>
+        </div>
+        
+         <div class="row body">
+         	<div class="col-sm-3 no-padding">
+            	<?php include 'left-nav-student.php' ?>
+            </div>
+            
+            <div class="col-sm-9">
+            	<p class="center bold">Welcome To The Admission Form</p><hr/>
+                
+                <p> <a href="admission2.php" >O-Level Admission Form</a> </p> <br/>
+				<p> <a href="admission.php" >A-Level Admission Form</a> <p/>
+            </div>
+         </div>
+         
+        <div class="row footer">
+        	<?php include 'footer.php' ?>
+        </div>
+    </div>
+</body>
+</html>
